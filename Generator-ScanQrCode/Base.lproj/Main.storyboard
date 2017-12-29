@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D7w-Xv-6DE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dyq-4X-chf">
+            <objects>
+                <viewController id="nce-J3-La9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WnW-do-DM3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cx-Ca-LGx">
+                                <rect key="frame" x="141.5" y="318" width="92" height="30"/>
+                                <color key="backgroundColor" red="0.85642707347869873" green="0.93716686964035034" blue="0.96246629953384399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Scan QrCode"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="5yn-fb-bsR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98440545797348022" green="0.98100823163986206" blue="0.9475364089012146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4cx-Ca-LGx" firstAttribute="centerX" secondItem="WnW-do-DM3" secondAttribute="centerX" id="OEX-QC-kTn"/>
+                            <constraint firstItem="4cx-Ca-LGx" firstAttribute="centerY" secondItem="WnW-do-DM3" secondAttribute="centerY" id="iwO-4x-zWi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PNN-VT-6DW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dMa-Co-1fQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qul-6D-IxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-695.20000000000005" y="29.23538230884558"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Generator_ScanQrCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3JB-W1-utD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_code_image_focus" translatesAutoresizingMaskIntoConstraints="NO" id="CJk-kt-WQp">
+                                <rect key="frame" x="62.5" y="168.5" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="KXB-Hd-01N"/>
+                                    <constraint firstAttribute="width" secondItem="CJk-kt-WQp" secondAttribute="height" multiplier="1:1" id="qde-qP-kJH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3JB-W1-utD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="15f-4U-xwl"/>
+                            <constraint firstItem="3JB-W1-utD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9qP-kY-5Fj"/>
+                            <constraint firstItem="CJk-kt-WQp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dt8-Hf-Anh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3JB-W1-utD" secondAttribute="trailing" id="ZW1-2T-3lz"/>
+                            <constraint firstItem="CJk-kt-WQp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="hJG-Qv-9lR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3JB-W1-utD" secondAttribute="bottom" id="yL4-oe-eJb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="3JB-W1-utD" id="GEm-UP-o4H"/>
+                        <outlet property="imageFocus" destination="CJk-kt-WQp" id="mAI-pt-kuj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="29"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aJT-y7-1cP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D7w-Xv-6DE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rjf-Xl-Lhr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nce-J3-La9" kind="relationship" relationship="rootViewController" id="h5I-Ut-nXp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Xz-Fm-t8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1644" y="29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="qr_code_image_focus" width="271" height="271"/>
+    </resources>
+</document>
